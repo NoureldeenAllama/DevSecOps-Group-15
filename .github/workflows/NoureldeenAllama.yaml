@@ -17,6 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     if : github.event.inputs.env == 'prod'
     steps:
+
+        
+      #### clones the repository to the runner machine
+      
+      - name: checkout repository
+        uses: actions/checkout@v3
+
       - name: echo "This is the production job"
         run: echo "Running production job"
 
@@ -29,7 +36,4 @@ jobs:
       - name: list files
         run: ls -la
 
-        #### clones the repository to the runner machine
 
-      - name: checkout repository
-        uses: actions/checkout@v3
