@@ -25,3 +25,11 @@ jobs:
 
       - name: show file content
         run: cat prod_file.txt 
+
+      - name: list files
+        run: ls -la
+
+        #### clones the repository to the runner machine
+
+      - name: checkout repository
+        uses: actions/checkout@v3
